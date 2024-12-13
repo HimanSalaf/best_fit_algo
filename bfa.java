@@ -47,7 +47,7 @@ public class bfa {
         // Print the allocation results
         System.out.println("\nProcess No.\tProcess Size (KB)\tBlock No.");
         for (int i = 0; i < n; i++) {
-            System.out.print(" " + (i + 1) + "\t\t" + processSizes[i] + " KB\t\t\t");
+            System.out.print(" " + (i + 1) + "\t\t" + processSizes[i] + " KB\t\t");
             if (allocation[i] != -1)
                 System.out.print(allocation[i] + 1);
             else
