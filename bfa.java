@@ -1,14 +1,11 @@
 import java.util.Scanner;
 
-/**
- * This class implements the Best Fit memory allocation algorithm.
- * It allocates memory blocks to processes based on their size requirements,
- * ensuring minimal waste of memory space.
+/*
+ This class implements the Best Fit memory allocation algorithm.
+ It allocates memory blocks to processes based on their size requirements,ensuring minimal waste of memory space.
  */
 public class bfa {
-    /**
-     * Allocates memory to blocks according to the Best Fit algorithm.
-     * 
+    /* Allocates memory to blocks according to the Best Fit algorithm.
      * @param blockSizes Array of available memory block sizes
      * @param m Number of memory blocks
      * @param processSizes Array of process sizes that require memory
@@ -62,9 +59,7 @@ public class bfa {
         }
     }
 
-    /**
-     * Driver method to execute the program.
-     */
+    //Driver method to execute the program.
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
