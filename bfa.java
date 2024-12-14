@@ -65,11 +65,18 @@ public class bfa {
 
         // Input for block sizes
         int m = 0;
-        while (m <= 0) {
+        while (true) {
             System.out.print("Enter number of memory blocks (positive integer): ");
-            m = scanner.nextInt();
-            if (m <= 0) {
-                System.out.println("Error: Number of memory blocks must be positive.");
+            if (scanner.hasNextInt()) {
+                m = scanner.nextInt();
+                if (m > 0) {
+                    break;
+                } else {
+                    System.out.println("Error: Number of memory blocks must be positive.");
+                }
+            } else {
+                System.out.println("That's not an integer. Please try again.");
+                scanner.next();
             }
         }
 
@@ -77,11 +84,18 @@ public class bfa {
         System.out.println("Enter sizes of memory blocks (in KB):");
         for (int i = 0; i < m; i++) {
             int size = 0;
-            while (size <= 0) {
+            while (true) {
                 System.out.print("Block " + (i + 1) + ": ");
-                size = scanner.nextInt();
-                if (size <= 0) {
-                    System.out.println("Error: Block size must be positive.");
+                if (scanner.hasNextInt()) {
+                    size = scanner.nextInt();
+                    if (size > 0) {
+                        break;
+                    } else {
+                        System.out.println("Error: Block size must be positive.");
+                    }
+                } else {
+                    System.out.println("That's not an integer. Please try again.");
+                    scanner.next();
                 }
             }
             blockSizes[i] = size;
@@ -89,11 +103,18 @@ public class bfa {
 
         // Input for process sizes
         int n = 0;
-        while (n <= 0) {
+        while (true) {
             System.out.print("Enter number of processes (positive integer): ");
-            n = scanner.nextInt();
-            if (n <= 0) {
-                System.out.println("Error: Number of processes must be positive.");
+            if (scanner.hasNextInt()) {
+                n = scanner.nextInt();
+                if (n > 0) {
+                    break;
+                } else {
+                    System.out.println("Error: Number of processes must be positive.");
+                }
+            } else {
+                System.out.println("That's not an integer. Please try again.");
+                scanner.next();
             }
         }
 
@@ -101,11 +122,18 @@ public class bfa {
         System.out.println("Enter sizes of processes (in KB):");
         for (int i = 0; i < n; i++) {
             int size = 0;
-            while (size <= 0) {
+            while (true) {
                 System.out.print("Process " + (i + 1) + ": ");
-                size = scanner.nextInt();
-                if (size <= 0) {
-                    System.out.println("Error: Process size must be positive.");
+                if (scanner.hasNextInt()) {
+                    size = scanner.nextInt();
+                    if (size > 0) {
+                        break;
+                    } else {
+                        System.out.println("Error: Process size must be positive.");
+                    }
+                } else {
+                    System.out.println("That's not an integer. Please try again.");
+                    scanner.next();
                 }
             }
             processSizes[i] = size;
